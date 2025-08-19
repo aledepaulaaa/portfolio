@@ -1,0 +1,397 @@
+/* General Styles */
+:root {
+    --azul: #28D2F8;
+    --branco: #FFFFFF;
+    --roxo: #BC32D4;
+    --fundo: #1A1A1A;
+    --fundo-secundario: #000000;
+    --font-family: 'Roboto Flex', sans-serif;
+
+    /* Carousel specific */
+    --carousel-gap: 20px;
+    --carousel-arrow-size: 48px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--branco);
+    font-family: var(--font-family);
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, .btn {
+    font-weight: 600;
+}
+
+.font-extralight {
+    font-weight: 300 !important;
+}
+
+h1 { font-size: 3.8rem; }
+h2 { font-size: 2.5rem; }
+p { line-height: 1.9; }
+
+section {
+    padding: 100px 0;
+}
+
+.bg-dark {
+    background-color: var(--fundo-secundario);
+}
+
+/* Header */
+.header {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Home Section */
+#home {
+    min-height: 100vh;
+}
+#home h1 {
+    line-height: 1.1;
+}
+#home h2 {
+    color: var(--azul);
+    font-size: 1.5rem;
+}
+#home p {
+    font-size: 1.1rem;
+    margin: 20px 0 30px 0;
+}
+.hero-image-container {
+    perspective: 1000px;
+}
+.hero-icon {
+    max-width: 100%;
+    overflow-x: hidden;
+    animation: float3D 6s ease-in-out infinite;
+}
+
+@keyframes float3D {
+    0% {
+        transform: translateY(10px) rotateY(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotateY(15deg) rotateX(5deg) translateZ(20px);
+    }
+    100% {
+        transform: translateY(10px) rotateY(0deg);
+    }
+}
+
+/* Buttons */
+.btn-primary, .btn-access, .btn-ver-mais {
+    border-radius: 4px !important;
+}
+/* Ajustei o tamanho do botão para ficar mais próximo do protótipo */
+.btn-primary {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    color: var(--branco);
+    padding: 10px 22px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 200px;
+    font-size: 0.95rem;
+}
+.btn-primary:hover {
+    background-color: var(--branco);
+    border-color: var(--branco);
+    color: var(--fundo-secundario);
+    transform: translateY(-3px);
+}
+
+/* Trabalhos Section */
+#trabalhos {
+    overflow: hidden;
+}
+.section-title-trabalhos {
+    line-height: 1.2;
+}
+
+/* Aumentei o gap entre as setas superiores (control buttons) */
+.carousel-controls {
+    display: flex;
+    gap: 60px; /* antes era 20px */
+}
+
+/* top small control buttons (kept as image buttons) */
+.carousel-control-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+.carousel-control-btn img, .carousel-control-btn .bi {
+    transition: transform 0.2s ease;
+}
+.carousel-control-btn:hover img, .carousel-control-btn:hover .bi {
+    transform: scale(1.08);
+}
+
+/* Project card */
+.project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+    /* garante que imagem preencha e mantenha cantos arredondados */
+    border-radius: 12px;
+}
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+.card-overlay h4 {
+    margin-bottom: 15px;
+}
+.btn-access {
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    color: var(--branco);
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+}
+.btn-access:hover {
+    background-color: var(--branco);
+    color: var(--fundo-secundario);
+}
+.btn-access .bi {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+@media (hover: none) and (pointer: coarse), (max-width: 991.98px) {
+    .card-overlay {
+        opacity: 1;
+    }
+}
+
+/* Custom responsive carousel (replaces previous bootstrap multi-item hack) */
+.projects-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: var(--carousel-gap);
+    transition: transform 0.5s cubic-bezier(.22,.9,.36,1);
+    will-change: transform;
+    align-items: stretch;
+    padding-bottom: 10px; /* visual breathing room */
+    scroll-behavior: smooth;
+}
+
+.card-item {
+    flex: 0 0 calc(100% / 1);
+    box-sizing: border-box;
+}
+
+/* Desktop: show 3 cards per view */
+@media (min-width: 768px) {
+    .card-item {
+        flex: 0 0 calc(100% / 3);
+    }
+}
+
+/* style for arrow overlays on the carousel
+   agora com fundo sólido azul (removida a transparência) */
+.projects-carousel .arrow-left,
+.projects-carousel .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    background: var(--azul);
+    border-radius: 50%;
+    width: var(--carousel-arrow-size);
+    height: var(--carousel-arrow-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: #051017; /* cor interna (contraste) */
+    box-shadow: none;
+}
+.projects-carousel .arrow-left { left: 24px; } /* aumentei o afastamento da borda */
+.projects-carousel .arrow-right { right: 24px; }
+
+.projects-carousel .arrow-left i,
+.projects-carousel .arrow-right i {
+    font-size: 1.08rem;
+    color: #001921;
+}
+
+/* Quando não precisa de setas (poucos items) escondemos */
+.projects-carousel.no-arrows .arrow-left,
+.projects-carousel.no-arrows .arrow-right {
+    display: none;
+}
+
+/* small visual tweaks for inner grid */
+.card-item .project-card { margin: 0 6px; }
+
+/* Serviços Section */
+/* Ajustes de espaçamento para seguir o protótipo */
+#servicos p {
+    color: #ccc;
+    margin-bottom: 16px;
+}
+.service-text-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+    gap: 18px; /* espaçamento consistente entre título / texto / botão */
+}
+.btn-ver-mais {
+    background: none;
+    border: 2px solid var(--branco);
+    color: var(--branco);
+    padding: 2px 8px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+.btn-ver-mais .bi {
+    transition: transform 0.3s ease-in-out;
+}
+.btn-ver-mais[aria-expanded="true"] .bi {
+    transform: rotate(180deg);
+}
+.backend-details-content {
+    padding-top: 20px;
+}
+.backend-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+.backend-list li {
+    margin-bottom: 10px;
+}
+
+/* Sobre Section */
+#sobre img {
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--fundo-secundario);
+}
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 999;
+    background: var(--azul);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    font-size: 24px;
+    color: var(--fundo);
+}
+.back-to-top:hover {
+    background: var(--branco);
+    color: var(--fundo);
+}
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive general */
+@media (max-width: 991.98px) {
+    section {
+        padding: 80px 0;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    #home, #sobre {
+        text-align: center;
+    }
+    .service-text-block {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .service-text-block .btn-primary {
+        width: auto !important;
+    }
+    #home .hero-icon {
+        margin-top: 50px;
+    }
+    #sobre img {
+        margin-top: 40px;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section-title-trabalhos {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .carousel-controls {
+        width: 100%;
+        justify-content: center;
+    }
+}

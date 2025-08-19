@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre de Paula - Desenvolvedor Web & UI UX Designer</title>
+
+    <!-- Google Fonts: Roboto Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/svg/ilustration_code_92x92.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="logo" href="#home">
+                <img src="assets/svg/ilustration_code_92x92.svg" alt="Logo Alexandre de Paula" width="50">
+            </a>
+            <nav class="nav-menu">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#trabalhos">Trabalhos</a>
+                <a class="nav-link" href="#servicos">Serviços</a>
+                <a class="nav-link" href="#sobre">Sobre</a>
+                <a class="nav-link" href="#contato">Contato</a>
+            </nav>
+            <button class="hamburger-button" id="hamburgerButton" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav-menu">
+            <a class="mobile-nav-link" href="#home">Home</a>
+            <a class="mobile-nav-link" href="#trabalhos">Trabalhos</a>
+            <a class="mobile-nav-link" href="#servicos">Serviços</a>
+            <a class="mobile-nav-link" href="#sobre">Sobre</a>
+            <a class="mobile-nav-link" href="#contato">Contato</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="font-extralight">
+                            ALEXANDRE<br>
+                            DE PAULA
+                        </h1>
+                        <h2>Desenvolvedor Web &amp; UI/UX Designer</h2>
+                        <p>
+                            A nova era da tecnologia chegou.<br>
+                            Crie suas soluções na web<br/>
+                            elevando seu profissionanlismo<br/>
+                            com um Desenvolvedor capacitado.
+                        </p>
+                        <a href="https://wa.me/5531983347898" target="_blank" class="btn btn-primary">CONTRATAR</a>
+                    </div>
+                    <div class="col-lg-6 text-center hero-image-container">
+                        <img src="assets/svg/ilustration_code.svg" class="hero-icon"
+                            alt="Ilustração de código">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trabalhos Section -->
+        <section id="trabalhos">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap">
+                    <h2 class="font-extralight section-title-trabalhos">
+                        ÚLTIMOS<br>
+                        PROJETOS<br>
+                        REALIZADOS
+                    </h2>
+                    <div class="carousel-controls">
+                        <!-- top small arrow images (kept) -->
+                        <button class="carousel-control-btn" type="button" data-action="prev" aria-label="Anterior">
+                            <img src="assets/svg/arrow_left.svg" alt="Anterior">
+                        </button>
+                        <button class="carousel-control-btn" type="button" data-action="next" aria-label="Próximo">
+                            <img src="assets/svg/arrow_right.svg" alt="Próximo">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom responsive carousel -->
+                <div id="projetosCarousel" class="projects-carousel" aria-roledescription="carousel">
+                    <div class="carousel-track" role="list">
+                        <div class="card-item" role="listitem">
+                            <div class="project-card">
+                                <img src="assets/img/iara.png" alt="Projeto IARA">
+                                <div class="card-overlay">
+                                    <h4>I.A.R.A</h4>
+                                    <a href="https://iaraapp.com.br" target="_blank" class="btn btn-access">ACESSAR <i
+                                            class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-item" role="listitem">
+                            <div class="project-card">
+                                <img src="assets/img/rastrear_ja.png" alt="Projeto Rastrear Já">
+                                <div class="card-overlay">
+                                    <h4>Rastrear Já</h4>
+                                    <a href="https://rastrearja.com/" target="_blank" class="btn btn-access">ACESSAR <i
+                                            class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-item" role="listitem">
+                            <div class="project-card">
+                                <img src="assets/img/solida.png" alt="Projeto Solida">
+                                <div class="card-overlay">
+                                    <h4>SÓLIDA</h4>
+                                    <a href="https://solida.pro/" target="_blank" class="btn btn-access">ACESSAR <i
+                                            class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-item" role="listitem">
+                            <div class="project-card">
+                                <img src="assets/img/biomeat.png" alt="Projeto Biomeat">
+                                <div class="card-overlay">
+                                    <h4>Biomeat</h4>
+                                    <a href="https://www.biomeat.com.br/" target="_blank" class="btn btn-access">ACESSAR
+                                        <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seções Serviços (REORDERED: PWA text BEFORE Backend) -->
+        <section id="servicos">
+            <div class="container">
+                <h2 class="text-center mb-5 font-extralight">SERVIÇOS</h2>
+                <div class="row gy-5 gx-lg-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="service-text-block">
+                            <h4>Landing Pages</h4>
+                            <p class="font-extralight">Impulsione suas vendas<br/> com um site bem desenhado.<br>Você não é
+                                uma <b>cópia</b><br/> feita por <b>IA</b> seu <br/>negócio é <b>único.</b></p>
+                            <a href="https://wa.me/5531983347898" target="_blank" 
+                            class="btn btn-primary"
+                            >
+                            CONTRATAR
+                        </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <img src="assets/svg/landing_page.svg" alt="Landing Pages"
+                            class="img-fluid service-illustration">
+                    </div>
+
+                    <!-- PWA TEXT BLOCK (moved up) -->
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-text-block">
+                            <h4>Desenvolvimento de PWAs</h4>
+                            <p class="font-extralight">PWA (Progressive Web Apps) é uma alternativa aos apps baixados em lojas
+                                como<br><b>Google Play</b> ou <b>Apple Store.</b><br>A PWA é um aplicativo web
+                                poderoso, que funciona em qualquer dispositivo: <b>Computadores,
+                                    Celulares, Notebooks, Tablets e outros.</b><br>Basta o cliente ter acesso a
+                                internet.</p>
+                            <a href="https://wa.me/5531983347898" target="_blank" class="btn btn-primary">CONTRATAR</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-lg-1 d-flex justify-content-center">
+                        <img src="assets/svg/pwa.svg" alt="Desenvolvimento de PWAs"
+                            class="img-fluid service-illustration">
+                    </div>
+
+                    <!-- BACKEND BLOCK (moved down) -->
+                    <div class="col-lg-6">
+                        <div class="service-text-block">
+                            <h4>Backend: A Mente por Trás<br>da Sua Aplicação</h4>
+                            <p class="font-extralight">O <b>back-end</b> é o motor invisível que faz a sua aplicação
+                                funcionar de forma segura e eficiente. Eu construo a parte mais importante do seu site
+                                ou aplicativo para que ele: <b>(clique em ver mais)</b>
+                                <button class="btn-ver-mais" data-bs-toggle="collapse" data-bs-target="#backend-details"
+                                    aria-expanded="false" aria-controls="backend-details">
+                                    ver mais <i class="bi bi-arrow-down"></i>
+                                </button>
+                            </p>
+                            <div class="collapse" id="backend-details">
+                                <div class="backend-details-content">
+                                    <ul class="backend-list">
+                                        <li><b>Seja Rápido e Confiável:</b> Processando informações de maneira ágil,
+                                            garantindo que a sua aplicação nunca "trave".</li>
+                                        <li><b>Realize Ações Essenciais:</b> Como processar pagamentos de forma segura,
+                                            gerenciar estoques de um e-commerce ou conectar-se com outros serviços para
+                                            o seu negócio.</li>
+                                        <li><b>Armazene e Proteja Seus Dados:</b> Guardando informações de clientes e
+                                            transações em um local seguro, organizado e de fácil acesso.</li>
+                                    </ul>
+                                    <p class="font-extralight">Em resumo, eu construo a infraestrutura digital que
+                                        transforma a sua ideia em uma solução completa e funcional, pronta para crescer
+                                        junto com você.</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5531983347898" target="_blank"
+                                class="btn btn-primary mt-3">CONTRATAR</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-center">
+                        <img src="assets/svg/backend.svg" alt="Backend" class="img-fluid service-illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre, Contato, Footer (sem alterações) -->
+        <section id="sobre">
+            <div class="container">
+                <h2 class="text-center mb-5 font-extralight">SOBRE</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h3>Sobre mim</h3>
+                        <p>Olá! Me chamo <b>Alexandre de Paula</b>, sou um <b>Desenvolvedor Web e UI/UX Designer</b>
+                            apaixonado por transformar ideias em soluções digitais inovadoras. Com formação em
+                            <b>Análise e Desenvolvimento de Sistemas</b>, eu combino conhecimento técnico e experiência
+                            prática para criar interfaces intuitivas e desenvolver sistemas robustos. Meu objetivo é
+                            entregar valor e soluções sob medida que impulsionam o <b>sucesso</b> de cada projeto.</p>
+                        <a href="https://wa.me/5531983347898" target="_blank" class="btn btn-primary">CONTRATAR</a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/img/sobre_ale.png" class="img-fluid" alt="Foto de Alexandre de Paula">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container text-center">
+                <h2 class="font-extralight">CONTATO</h2>
+                <p class="lead my-4">Vamos conversar sobre seu projeto?<br>visando facilitar e ser objetivo, deixei a
+                    disposição meu contato do WahtsApp.<br>Assim, podemos fazer uma reunião ou ligação direta para
+                    tratarmos de negócios.<br>Meu atendimento é de <b>Segunda a Sábado</b> de <b>08h as
+                        20h.</b><br>Aguardo seu contato.</p>
+                <a href="https://wa.me/5531983347898" target="_blank" class="btn btn-primary btn-lg">INICIAR
+                    CONVERSA</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <p class="mb-0" id="copyright"></p>
+            <div class="social-icons">
+                <a href="https://www.figma.com/@aledepaula" target="_blank" class="social-icon"><img
+                        src="assets/svg/figma.svg" alt="Figma"></a>
+                <a href="https://www.linkedin.com/in/aledepaulaa/" target="_blank" class="social-icon"><img
+                        src="assets/svg/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/aledepaulaaa/" target="_blank" class="social-icon"><img
+                        src="assets/svg/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Seus scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
